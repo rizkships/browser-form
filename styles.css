@@ -45,6 +45,16 @@ body {
     background-color: #45a049;
   }
 
+  input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
   /* This is our style for the invalid fields */
 input:invalid {
     border-color: #900;

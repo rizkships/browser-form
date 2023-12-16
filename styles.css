@@ -44,3 +44,13 @@ body {
   input[type="submit"]:hover {
     background-color: #45a049;
   }
+
+  /* This is our style for the invalid fields */
+input:invalid {
+    border-color: #900;
+    background-color: #fdd;
+  }
+  
+  input:focus:invalid {
+    outline: none;
+  }

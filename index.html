@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Browser Form</title>
 </head>
 <body>
     <form>
-        <label for="email">Enter your email</label>
-        <input type="email" id="email" required>
+        <fieldset>
+        <label for="email"></label>
+        <input type="email" id="email" required placeholder="Enter email">
 
-        <label for="country">Enter your country</label>
-        <input type="text" id="country" required>
+        <label for="country"></label>
+        <input type="text" id="country" required placeholder="Enter country">
 
-        <label for="zipcode">Enter your zipcode</label>
-        <input type="number" id="zipcode" required>
+        <label for="zipcode"></label>
+        <input type="number" id="zipcode" required placeholder="Enter zipcode">
 
-        <label for="password">Create your password</label>
-        <input type="password" id="password" required>
+        <label for="password"></label>
+        <input type="password" id="password" required placeholder="Create password">
 
 
-        <label for="confirm-password">Re-enter your password</label>
-        <input type="password" id="confirm-password" required>
+        <label for="confirm-password"></label>
+        <input type="password" id="confirm-password" required placeholder="Confirm password">
+         
+        <button>Submit</button>
+        
+    </fieldset>
 
 
     </form>

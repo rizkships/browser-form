@@ -23,23 +23,24 @@ email.addEventListener('input', (event) => {
 
 })
 
-confirmPassword.addEventListener('input', (event) => {
-    // Compare passwords and show error if they don't match
-    if (password.value !== confirmPassword.value) {
-      confirmPasswordError.textContent = "Passwords do not match.";
-      confirmPasswordError.className = "error active";
-    } else {
-      confirmPasswordError.textContent = "";
-      confirmPasswordError.className = "error";
-    }
-  });
+document.getElementById('submitButton').addEventListener('click', checkPassword);
+
+
+function checkPassword() {
+    let pass = document.getElementById('password').value;
+    let confirmPass = document.getElementById('confirm-password').value;
+    console.log(pass, confirmPass)
+
+    
+}
+
 
 form.addEventListener("submit", (event) => {
     // if the email field is valid, we let the form submit
-    if (!email.validity.valid || password.value !== confirmPassword.value) {
+    if (!email.validity.valid) {
       // If it isn't, we display an appropriate error message
-      showError(email, emailError);
-        showError(confirmPassword, confirmPasswordError);
+      showError();
+      
       // Then we prevent the form from being sent by canceling the event
       event.preventDefault();
     }

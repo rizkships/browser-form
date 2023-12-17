@@ -2,9 +2,10 @@ const form = document.querySelector('form');
 const email = document.getElementById('email');
 const country = document.getElementById('country');
 const zipcode = document.getElementById('zipcode');
-const passwordt = document.getElementById('password');
+const password = document.getElementById('password');
 const confirmPassword = document.getElementById('confirm-password');
 const emailError = document.querySelector("#mail + span.error");
+const confirmPasswordError = document.querySelector("#confirm-password + span.error");
 
 email.addEventListener('input', (event) => {
      // Each time the user types something, we check if the
@@ -22,11 +23,23 @@ email.addEventListener('input', (event) => {
 
 })
 
+confirmPassword.addEventListener('input', (event) => {
+    // Compare passwords and show error if they don't match
+    if (password.value !== confirmPassword.value) {
+      confirmPasswordError.textContent = "Passwords do not match.";
+      confirmPasswordError.className = "error active";
+    } else {
+      confirmPasswordError.textContent = "";
+      confirmPasswordError.className = "error";
+    }
+  });
+
 form.addEventListener("submit", (event) => {
     // if the email field is valid, we let the form submit
-    if (!email.validity.valid) {
+    if (!email.validity.valid || password.value !== confirmPassword.value) {
       // If it isn't, we display an appropriate error message
-      showError();
+      showError(email, emailError);
+        showError(confirmPassword, confirmPasswordError);
       // Then we prevent the form from being sent by canceling the event
       event.preventDefault();
     }

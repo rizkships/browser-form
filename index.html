@@ -25,10 +25,13 @@
         <input type="password" id="password" required placeholder="Create password">
 
 
-        <label for="confirm-password"></label>
+        <label for="confirm-password">
+            <span class="error" aria-live="polite"></span>
+        </label>
         <input type="password" id="confirm-password" required placeholder="Confirm password">
+        <p id="message"></p>
          
-        <button>Submit</button>
+        <input type="button" value="SUBMIT"></button>
         
     </fieldset>
 

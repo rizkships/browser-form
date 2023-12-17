@@ -6,7 +6,9 @@ const password = document.getElementById('password');
 const confirmPassword = document.getElementById('confirm-password');
 const emailError = document.querySelector("#mail + span.error");
 const confirmPasswordError = document.querySelector("#confirm-password + span.error");
+ 
 
+/*
 email.addEventListener('input', (event) => {
      // Each time the user types something, we check if the
   // form fields are valid.
@@ -23,15 +25,28 @@ email.addEventListener('input', (event) => {
 
 })
 
+*/
+
 document.getElementById('submitButton').addEventListener('click', checkPassword);
 
 
 function checkPassword() {
     let pass = document.getElementById('password').value;
     let confirmPass = document.getElementById('confirm-password').value;
+    let message = document.getElementById('message')
     console.log(pass, confirmPass)
 
+    if (pass.length != 0) {
+        if (pass === confirmPass) {
+        message.textContent = "Passwords match";
     
+    }
+    else {
+        message.textContent = "Passwords don't match"
+        
+    };
+    console.log(message.textContent)
+}
 }
 
 
@@ -64,6 +79,14 @@ form.addEventListener("submit", (event) => {
     // Set the styling appropriately
     emailError.className = "error active";
   }
+
+
+
+
+
+
+
+
 
 /* 
 document.addEventListener('DOMContentLoaded', function () {

@@ -96,3 +96,9 @@ input:invalid {
     padding: 0.3em;
   }
   
+  p {
+    font-size: 14px;
+    margin: 15px 0;
+    color: black;
+    padding: 5px 20px;
+  }

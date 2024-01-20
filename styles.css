@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
+
+/*
+
 body {
     font-family: Arial, sans-serif;
     background-color: #e0f7e5;
@@ -35,6 +41,7 @@ body {
   }
 
 /* Updated CSS for button */
+/*
 input[type="button"] {
     background-color: #4caf50;
     color: #fff;
@@ -48,6 +55,8 @@ input[type="button"] {
   }
   
   /* Additional styling for the input[type="button"] */
+
+  /*
   input[type="button"]:focus {
     outline: none;
   }
@@ -58,7 +67,7 @@ input[type="button"] {
     background-color: #fdd;
   }
   
-
+/*
   input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -70,6 +79,7 @@ input[type="number"] {
 }
 
   /* This is our style for the invalid fields */
+  /*
 input:invalid {
     border-color: #900;
     background-color: #fdd;
@@ -80,6 +90,7 @@ input:invalid {
   }
 
   /* This is the style of our error messages */
+  /*
 .error {
     width: 100%;
     padding: 0;
@@ -102,3 +113,4 @@ input:invalid {
     color: black;
     padding: 5px 20px;
   }
+  */

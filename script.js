@@ -22,6 +22,15 @@ function checkInputs() {
 	} else {
 		setSuccessFor(username);
 	}
+
+  if(emailValue === '') {
+		setErrorFor(email, 'Email cannot be blank');
+	} else if (!isEmail(emailValue)) {
+		setErrorFor(email, 'Not a valid email');
+	} else {
+		setSuccessFor(email);
+	}
+
   
 }
 
